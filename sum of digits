@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int sum(int a){
+if(a/10==0){
+    return a;
+}
+int ans = sum(a/10);
+
+if(a/10!=0){
+    return ans+(a%10);
+}
+return ans;
+
+}
+int main(){
+  int *a = new int;
+  cin>>*a;
+  cout<<sum(*a);
+	delete a;
+return 0;
+}
