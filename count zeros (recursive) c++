@@ -1,0 +1,21 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int zeros(int k){
+if(k/10==0){
+    return 0;
+}
+int small = zeros(k/10);
+
+if(k%10==0){
+    return small+1;
+}
+return small;
+}
+
+int main(){
+    int *k = new int;
+    cin>>*k;
+cout<<zeros(*k);
+return 0;}
