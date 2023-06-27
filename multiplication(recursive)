@@ -1,0 +1,27 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int multiplication(int m,int n){
+    if(n==0){
+        return 0;
+    }
+    int small = multiplication(m,n-1);
+    if(n!=0){
+        return small+m;
+    }
+    return small;
+}
+
+int main(){
+int *m = new int;
+int *n = new int;
+
+cin>>*m;
+cin>>*n;
+
+cout<<multiplication(*m,*n);
+delete m;
+delete n;
+
+return 0;}
