@@ -1,0 +1,30 @@
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+string palindrome(string a){
+if(&a[0]==&a.back()){
+    return "true";
+}
+
+if(a[0]==a.back()){
+    a.pop_back();
+    a.erase(0,1);
+    return "true";
+}
+else{
+    return "false";
+}
+string ans = palindrome(a);
+return ans;
+}
+int main(){
+
+    string *a = new string();
+    cin>>*a;
+    cout<<palindrome(*a);
+
+return 0;
+}
+
